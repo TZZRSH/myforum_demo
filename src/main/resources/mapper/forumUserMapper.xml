@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myforum_demo.mapper.ForumUserMapper">
+    <select id="countAccount_num" resultType="Integer" parameterType="java.lang.String">
+        SELECT
+            count(1) Account_count
+        FROM my_forum_user_t v
+        WHERE v.account_num = #{account_num}
+    </select>
+</mapper>
+
+
